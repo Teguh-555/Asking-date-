@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Someone I Love</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="custom-body">
+  <div class="background-overlay"></div>
+  <div id="heart-container"></div>
+
+  <div class="main-container fade-in">
+    <div class="card">
+      <img src="her picture.jpeg" alt="Someone special" class="profile-img fade-in-delayed" />
+      <h1 class="title">Someone I Love</h1>
+      <p class="description">
+        This is a little tribute to someone truly wonderful. Your smile, your laugh, your presence — it means more than you know.
+      </p>
+
+      <div class="info-section">
+        <div class="info-box">
+          <h2 class="info-title">What Makes You Special</h2>
+          <ul>
+            <li>Brightens every room</li>
+            <li>Kind and thoughtful</li>
+            <li>Gives the best hugs</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h2 class="info-title">Sweet Memories</h2>
+          <ul>
+            <li>Late-night talks</li>
+            <li>Laughing over silly things</li>
+            <li>Every little moment</li>
+          </ul>
+        </div>
+      </div>
+
+      <blockquote class="quote">
+        “You are my today and all of my tomorrows.” – Leo Christopher
+      </blockquote>
+    </div>
+
+    <!-- 💌 Hidden Message -->
+    <div id="hidden-message" class="hidden-message hidden">
+      💌 I made this for you — just to say you’re always in my thoughts.
+    </div>
+
+    <!-- 🎶 Music Button -->
+    <div class="music-player">
+      <audio id="bg-music" src="SpotiDownloader.com - Here We Go Again _ Fanboi - Ardhito Pramono.mp3" loop></audio>
+      <button onclick="playMusic()" class="music-btn">🎵 Play Music</button>
+    </div>
+
+    <!-- 💖 Ask Them Out Section -->
+    <div class="ask-out fade-in-delayed">
+      <h2 class="ask-title">Sooo... will you go out with me? </h2>
+      <div class="ask-buttons">
+        <button class="btn yes" onclick="revealDateMessage('Yay! Let’s plan a cute lil date 💖')">Yes</button>
+        <button class="btn also-yes" onclick="revealDateMessage('I knew you’d say yes 😎')">very yes</button>
+      </div>
+      <p id="date-response" class="hidden-message hidden"></p>
+    </div>
+
+    <p class="footer">Made with 💖</p>
+  </div>
+
+  <!-- ❤️ Script -->
+  <script>
+    const music = document.getElementById("bg-music");
+    const message = document.getElementById("hidden-message");
+    const dateResponse = document.getElementById("date-response");
+
+    function playMusic() {
+      music.play();
+      message.classList.remove("hidden");
+      message.classList.add("fade-in");
+    }
+
+    function revealDateMessage(text) {
+      dateResponse.textContent = text;
+      dateResponse.classList.remove("hidden");
+      dateResponse.classList.add("fade-in");
+    }
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart-particle";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.innerText = "💖";
+      document.getElementById("heart-container").appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }, 400);
+  </script>
+</body>
+</html>

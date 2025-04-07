@@ -1,0 +1,233 @@
+/* Romantic Background */
+body.custom-body {
+    margin: 0;
+    font-family: sans-serif;
+    background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80")
+      center/cover no-repeat fixed;
+    color: #374151;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 241, 242, 0.75);
+    z-index: -1;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+  }
+  
+  /* Card Content */
+  .card {
+    max-width: 40rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .profile-img {
+    border-radius: 9999px;
+    margin: 0 auto 1rem;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ec4899;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    color: #4b5563;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .info-section {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .info-box {
+    background-color: #ffe4e6;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+  
+  .info-title {
+    font-weight: 600;
+    color: #db2777;
+    margin-bottom: 0.5rem;
+  }
+  
+  .quote {
+    font-style: italic;
+    color: #ec4899;
+    margin-top: 1.5rem;
+  }
+  
+  /* 🎵 Music Controls */
+  .music-player {
+    margin-top: 2rem;
+  }
+  
+  .music-btn {
+    background-color: #ec4899;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .music-btn:hover {
+    background-color: #db2777;
+  }
+  
+  /* 💌 Hidden Message */
+  .hidden-message {
+    margin-top: 2rem;
+    background-color: #fce7f3;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.125rem;
+    color: #9d174d;
+    font-weight: 600;
+    text-align: center;
+    max-width: 30rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* 💖 Heart Animation */
+  #heart-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .heart-particle {
+    position: absolute;
+    bottom: 0;
+    font-size: 1.5rem;
+    animation: floatUp 6s ease-in infinite;
+    opacity: 0.8;
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-50vh) scale(1.3);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-100vh) scale(0.8);
+      opacity: 0;
+    }
+  }
+  
+  /* ✨ Fade-in Animation */
+  .fade-in {
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+  }
+  
+  .fade-in-delayed {
+    animation: fadeIn 1.8s ease forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* 💘 Ask Out Section */
+  .ask-out {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  .ask-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #be185d;
+    margin-bottom: 1rem;
+  }
+  
+  .ask-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    color: white;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .yes {
+    background-color: #10b981; /* green */
+  }
+  
+  .also-yes {
+    background-color: #3b82f6; /* blue */
+  }
+  
+  /* 👣 Footer */
+  .footer {
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+  
